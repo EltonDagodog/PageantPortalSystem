@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 5%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5%;
+
+    --primary: 141 97% 13%;  /* Dark Forest Green */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 51 100% 50%; /* Gold */
+    --secondary-foreground: 0 0% 5%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 51 100% 50%; /* Gold */
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 85%;
+    --input: 0 0% 85%;
+    --ring: 141 97% 13%;  /* Dark Forest Green */
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 141 97% 8%;
+    --sidebar-foreground: 51 100% 50%;
+    --sidebar-primary: 51 100% 50%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 141 70% 17%;
+    --sidebar-accent-foreground: 51 100% 50%;
+    --sidebar-border: 141 70% 17%;
+    --sidebar-ring: 51 100% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 141 97% 20%;  /* Dark Forest Green (slightly lighter) */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 51 80% 50%; /* Gold */
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 51 80% 50%; /* Gold */
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 62% 35%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 51 80% 50%; /* Gold */
+    
+    --sidebar-background: 141 97% 8%;
+    --sidebar-foreground: 51 100% 50%;
+    --sidebar-primary: 51 100% 50%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 141 70% 17%;
+    --sidebar-accent-foreground: 51 100% 50%;
+    --sidebar-border: 141 70% 17%;
+    --sidebar-ring: 51 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-playfair;
+  }
+}
+
+.pageant-card {
+  @apply border-2 border-pageant-gold/30 relative overflow-hidden 
+         transition-all duration-300 hover:shadow-lg hover:shadow-pageant-gold/20
+         hover:border-pageant-gold/80;
+}
+
+.pageant-card::before {
+  content: "";
+  @apply absolute inset-0 bg-gradient-to-tr from-pageant-green/5 to-pageant-gold/5
+         opacity-0 transition-opacity duration-300;
+}
+
+.pageant-card:hover::before {
+  @apply opacity-100;
+}
+
+.crown-icon {
+  @apply text-pageant-gold;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
