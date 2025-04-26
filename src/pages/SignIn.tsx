@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import AuthCard from "@/components/AuthCard";
 import { LogIn, Loader2 } from "lucide-react";
+import PageantNavbar from "@/components/PageantNavbar";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -54,6 +55,8 @@ const SignIn = () => {
   };
 
   return (
+    <>
+    <PageantNavbar/>
     <AuthCard 
       title="Welcome Back" 
       description="Sign in to your coordinator account"
@@ -120,6 +123,7 @@ const SignIn = () => {
         </Link>
       </div>
     </AuthCard>
+    </>
   );
 };
 

@@ -12,8 +12,8 @@ interface AuthCardProps {
 
 const AuthCard = ({ title, description, children, footer }: AuthCardProps) => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center min-h-screen bg-gradient-to-br from-pageant-green/90 to-pageant-green/50 p-4">
-      <Card className="w-full max-w-md shadow-xl border-pageant-gold/20 animate-in fade-in duration-500">
+    <div className="fixed inset-0 flex items-center justify-center min-h-screen bg-gradient-to-br from-pageant-green/90 to-pageant-green/50 p-4 ">
+      <Card className="w-full max-w-md shadow-xl border-pageant-gold/20 animate-in fade-in duration-500 mt-20">
         <CardHeader className="space-y-4 text-center">
           <div className="flex justify-center">
             <PageantLogo size="lg" />

@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import AuthCard from "@/components/AuthCard";
 import { LogIn, Loader2 } from "lucide-react";
+import PageantNavbar from "@/components/PageantNavbar";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -72,6 +73,8 @@ const SignUp = () => {
   };
 
   return (
+    <>
+    <PageantNavbar/>
     <AuthCard 
       title="Create Your Account" 
       description="Sign up as an Event Coordinator to start managing your pageants"
@@ -151,6 +154,7 @@ const SignUp = () => {
         </Button>
       </form>
     </AuthCard>
+    </>
   );
 };
 
