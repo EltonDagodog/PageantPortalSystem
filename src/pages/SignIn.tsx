@@ -55,8 +55,7 @@ const SignIn = () => {
   };
 
   return (
-    <>
-    <PageantNavbar/>
+  
     <AuthCard 
       title="Welcome Back" 
       description="Sign in to your coordinator account"
@@ -123,7 +122,7 @@ const SignIn = () => {
         </Link>
       </div>
     </AuthCard>
-    </>
+
   );
 };
 

@@ -73,8 +73,7 @@ const SignUp = () => {
   };
 
   return (
-    <>
-    <PageantNavbar/>
+  
     <AuthCard 
       title="Create Your Account" 
       description="Sign up as an Event Coordinator to start managing your pageants"
@@ -154,7 +153,7 @@ const SignUp = () => {
         </Button>
       </form>
     </AuthCard>
-    </>
+
   );
 };
 
